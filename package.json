@@ -1,7 +1,7 @@
 {
   "name": "kindle-export",
   "description": "Export your kindle vocab to CSV",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
@@ -32,6 +32,6 @@
     "np": "^3.0.4"
   },
   "scripts": {
-     "release": "np"
+    "release": "np"
   }
 }
