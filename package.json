@@ -5,9 +5,20 @@
   "main": "index.js",
   "license": "MIT",
   "keywords": [
-     "kindle", "csv"
+    "kindle",
+    "paperwhite",
+    "csv",
+    "excel",
+    "vocabulary",
+    "anki",
+    "flashcards",
+    "spreadsheet"
   ],
+  "bin": {
+    "kindle-export": "./index.js"
+  },
   "author": "Martin Christov",
+  "homepage": "https://github.com/martinchristov/kindle-export",
   "dependencies": {
     "chalk": "^2.4.1",
     "clear": "^0.1.0",
@@ -16,5 +27,11 @@
     "json2csv": "^4.2.1",
     "minimist": "^1.2.0",
     "sqlite3": "^4.0.3"
+  },
+  "devDependencies": {
+    "np": "^3.0.4"
+  },
+  "scripts": {
+     "release": "np"
   }
 }
