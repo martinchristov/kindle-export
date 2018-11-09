@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const sqlite3 = require('sqlite3').verbose()
 const json2csv = require('json2csv').parse
 const fs = require('fs')
@@ -7,6 +8,7 @@ const figlet = require('figlet')
 const argv = require('minimist')(process.argv.slice(2))
 const inquirer = require('./lib/inquirer')
 const { booksQ, wordsLookupsQ } = require('./lib/queries')
+const cn = require('./lib/connect')
 
 clear()
 console.log(
@@ -14,9 +16,6 @@ console.log(
     figlet.textSync('Kindle Export', { horizontalLayout: 'full' })
   )
 )
-
-const cn = require('./lib/connect')
-cn.init()
 
 const interface = {
    fetchBooks: () => {
@@ -75,5 +74,6 @@ const interface = {
       })
    }
 }
-
-interface.fetchBooks()
+cn.init().then(() => {
+   interface.fetchBooks()
+})
