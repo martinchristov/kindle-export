@@ -9,10 +9,10 @@ $ kindle-export
 ```
 Optionally provide the path to your db as parameter
 ```shell
-$ kindle-export -pathToDB ~/Desktop/vocab.db
+$ kindle-export --db ~/Desktop/vocab.db
 ```
 Optionally provide the export path
 ```shell
-$ kindle-export -output ~/Desktop/vocab.csv
+$ kindle-export --output ~/Desktop/vocab.csv
 ```
 
